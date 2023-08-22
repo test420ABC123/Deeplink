@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fallback Page</title>
+    <script>
+        // JavaScript code to redirect based on device and app installation
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            // iOS device
+            window.location.href = "https://ousinternalprod.onelink.me/pjIA/afb4fb67";
+        } else if (/Android/.test(userAgent)) {
+            // Android device
+            window.location.href = "https://ousinternalprod.onelink.me/pjIA/afb4fb67";
+        } else {
+            // Fallback for other devices
+            window.location.href = "https://livingwithdiabetes.bd.com/bd-diabetes-care-app";
+        }
+    </script>
+</head>
+<body>
+    <!-- Display a message or content if redirection doesn't occur -->
+    <p>If you're not redirected, please click the appropriate link:</p>
+    <a href="https://apps.apple.com/us/app/bd-diabetes-care/id1474809961">Open iOS App</a>
+    <a href="https://play.google.com/store/apps/details?id=com.bd.dh.dcapp">Open Android App</a>
+    <a href="https://livingwithdiabetes.bd.com/bd-diabetes-care-app">Visit Fallback Web Page</a>
+</body>
+</html>
